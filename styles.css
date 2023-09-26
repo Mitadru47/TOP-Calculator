@@ -1,0 +1,121 @@
+html{
+
+    margin: 5px;
+    border: 1px solid red;
+}
+
+body{
+    border: 1px solid green;
+}
+
+.container1{
+
+    margin: 5px;
+    border: 1px solid blue;
+
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator{
+
+   margin: 5px;
+   border: 1px solid brown;
+   
+   padding: 5px;
+}
+
+.output{
+
+    margin: 5px;
+    border: 1px solid yellowgreen;
+
+    height: 150px;
+
+    text-align: center;
+    font-size: 2rem;
+
+    line-height: 100px;
+}
+
+.operators{
+
+    margin: 5px;
+    border: 1px solid purple;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.operators div{
+
+    margin: 5px;
+    border: 1px solid palevioletred;
+
+    padding: 5px;
+
+    height: 40px;
+    width: 40px;
+
+    text-align: center;
+    line-height: 40px;
+}
+
+.operators div:hover{
+    background-color: palevioletred;
+}
+
+.numbers{
+
+    margin: 5px;
+    border: 1px solid orange;
+
+    display: flex;
+}
+
+.number{
+
+    margin: 5px;
+    border: 1px solid orangered;
+
+    height: 20px;
+    width: 20px;
+
+    padding: 5px;
+    text-align: center;
+}
+
+.number:hover{
+    background-color: orangered;
+}
+
+.misc{
+
+    margin: 5px;
+    border: 1px solid salmon;
+
+    display: flex;
+    justify-content: center;
+}
+
+.misc div{
+
+    margin: 5px;
+    border: 1px solid sandybrown;
+
+    height: 25px;
+    width: 75px;
+
+    padding: 5px;
+
+    text-align: center;
+    line-height: 25px;
+}
+
+.misc div:hover{
+    background-color: sandybrown;
+}
