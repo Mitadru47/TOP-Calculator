@@ -30,7 +30,36 @@ function multiply(a, b){
 }
 
 function divide(a, b){
-    return (a / b);
+
+    if((a!==0) && (b === 0))
+        return "To infinity & beyond...";
+
+    return (Math.round((a / b) * 100))/100;
+}
+
+function operate(){
+
+    var result = "";
+    switch(operator){
+
+        case "+":
+            result = add(Number(operand1), Number(operand2));
+            break;
+
+        case "-":
+            result = subtract(Number(operand1), Number(operand2));
+            break;
+
+        case "*":
+             result = multiply(Number(operand1), Number(operand2));
+            break;
+
+        case "/":
+            result = divide(Number(operand1), Number(operand2));
+            break;
+    }
+
+    return result.toString();
 }
 
 var operand1 = "";
@@ -51,50 +80,80 @@ numbers.addEventListener("click", (event) => {
 
 operators.addEventListener("click", (event) => {
 
-    if((event.target.innerText.length < 2) && (operator === "")){
+    if(event.target.innerText.length < 2){
         
-        operand1 = expression;
-        operator = event.target.innerText;
+        if(operator === ""){
+        
+            operand1 = expression;
+            operator = event.target.innerText;
 
-        console.log(operator);
+            expression = expression + " " + operator + " ";
+            output.textContent = expression;
+        
+        } else {
 
-        expression = expression + " " + operator + " ";
-        output.textContent = expression;
+            operand2 = (expression.substring((operand1.length + 3)));
+
+            if(((operand1 === "") && (operand2 === "")) || (operand1 === "") || (operand2 === "")){
+                expression = "Try Again..";
+        
+            } else {
+                expression = operate();
+            }
+
+            if((expression === "To infinity & beyond...") || (expression === "Try Again..")){
+
+                output.textContent = expression;
+               
+                operand1 = "";
+                operand2 = "";
+
+                operator = "";
+                expression = "";
+
+            } else {
+
+                operand1 = expression;
+                operand2 = "";
+                
+                operator = event.target.innerText;
+
+                expression = expression + " " + operator + " ";
+                output.textContent = expression;
+            }
+        }
     }
     
 }, true);
 
 calculate.addEventListener("click", () => {
 
-    var result = "";
     operand2 = (expression.substring((operand1.length + 3)));
 
-    switch(operator){
+    if(((operand1 === "") && (operand2 === "")) || (operand1 === "") || (operand2 === "")){
+        expression = "Try Again..";
 
-        case "+":
-            result = add(Number(operand1), Number(operand2));
-            break;
-
-        case "-":
-            result = subtract(Number(operand1), Number(operand2));
-            break;
-
-        case "*":
-             result = multiply(Number(operand1), Number(operand2));
-            break;
-
-        case "/":
-            result = divide(Number(operand1), Number(operand2));
-            break;
+    } else {
+        expression = operate();
     }
 
-    expression = result.toString();
     output.innerText = expression;
 
-    operand1 = expression;
-    operand2 = "";
+    if((expression === "To infinity & beyond...") || (expression === "Try Again..")){
 
-    operator = "";
+        operand1 = "";
+        operand2 = "";
+
+        operator = "";
+        expression = "";
+
+    } else {
+
+        operand1 = expression;
+        operand2 = "";
+
+        operator = "";
+    }
 
 }, true);
 
