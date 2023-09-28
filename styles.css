@@ -119,3 +119,21 @@ body{
 .misc div:hover{
     background-color: sandybrown;
 }
+
+#decimalDot{
+
+    margin: 5px;
+    border: 1px solid orangered;
+
+    font-size: 1.5rem;
+    width: 25px;
+
+    padding: 5px;
+
+    text-align: center;
+    line-height: 10px;
+}
+
+#decimalDot:hover{
+    background-color: orangered;
+}
