@@ -42,7 +42,7 @@ h1{
 
     /* border: 1px solid black; */
 
-    font-family: 'Glass Antiqua', cursive;
+    font-family: 'Ubuntu Mono', monospace;
     font-size: 1.2rem;
 
     padding: 25px;
@@ -54,6 +54,7 @@ h1{
 .container2{
 
     /* border: 1px solid red; */
+    font-family: 'Ubuntu Mono', monospace;
     
     width: 80%;
     display: flex;
@@ -200,5 +201,6 @@ footer{
     padding: 1px;
     padding-right: 2.5%;
 
-    background-color: #8ECDDD;
+    background-color: #FAF2D3;
+    font-family: 'Ubuntu Mono', monospace;
 }
