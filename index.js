@@ -366,9 +366,9 @@ document.addEventListener("keydown", (event)=>{
 
 }, true);
 
-document.addEventListener("click", (event)=>{
+document.addEventListener("click", (event)=>{   
 
-    if((event.target.innerText.length < 2) || (!event.target.innerText.includes(" "))){
+    if((event.target.innerText.length < 2) || (event.target.innerText === "Backspace") || (event.target.innerText === "Clear") || (event.target.innerText === "Calculate")){
         display.innerText = event.target.innerText;
     }
 }, true);
