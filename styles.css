@@ -1,38 +1,92 @@
 html{
 
-    margin: 5px;
-    border: 1px solid red;
+    /* margin: 5px; */
+    /* border: 1px solid red; */
 }
 
 body{
-    border: 1px solid green;
+
+    background-color: #FFFADD;
+
+    margin: 0;
+    /* border: 1px solid green; */
 }
 
 .container1{
 
-    margin: 5px;
-    border: 1px solid blue;
+    /* margin: 5px; */
+    /* border: 1px solid blue; */
 
     height: 100vh;
 
     display: flex;
+    flex-direction: column;
 
     justify-content: center;
     align-items: center;
 }
 
+h1{
+
+    font-family: 'Graduate', serif;
+    font-size: 2.5rem;
+
+    margin: 0 10%;
+    margin-bottom: 10px;
+}
+
+#excerpt{
+
+    margin: 0 10%;
+    margin-bottom: 25px;
+
+    /* border: 1px solid black; */
+
+    font-family: 'Glass Antiqua', cursive;
+    font-size: 1.2rem;
+
+    padding: 25px;
+    padding-left: 0;
+
+    text-align: start;
+}
+
+.container2{
+
+    /* border: 1px solid red; */
+    
+    width: 80%;
+    display: flex;
+
+    justify-content:space-around;
+    align-items: center;
+}
+
+#displayArea{
+
+    border: 1px solid blue;
+
+    height: 351px;
+    width: 444px;
+
+    text-align: center;
+    line-height: 320px;
+
+    font-size: 5rem;
+}
+
 .calculator{
 
-   margin: 5px;
    border: 1px solid brown;
-   
    padding: 5px;
 }
 
 .output{
 
     margin: 5px;
-    border: 1px solid yellowgreen;
+    margin-bottom: 10px;
+
+    border: 1px solid green;
 
     height: 150px;
 
@@ -136,4 +190,15 @@ body{
 
 #decimalDot:hover{
     background-color: orangered;
+}
+
+footer{
+
+    font-size: 0.8rem;
+    text-align: end;
+
+    padding: 1px;
+    padding-right: 2.5%;
+
+    background-color: #8ECDDD;
 }

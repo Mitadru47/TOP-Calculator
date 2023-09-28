@@ -1,4 +1,5 @@
 var output = document.querySelector(".output");
+var display = document.querySelector("#displayArea");
 
 var operators = document.querySelector(".operators");
 var numbers = document.querySelector(".numbers");
@@ -227,8 +228,6 @@ backspace.addEventListener("click", () => {
 }, true);
 
 document.addEventListener("keydown", (event)=>{
-
-    console.log(event.key);
     
     var operatorArray = ["+","-","*","/"];
     var numberArray = ["0","1","2","3","4","5","6","7","8","9"];
@@ -365,4 +364,15 @@ document.addEventListener("keydown", (event)=>{
         }
     }
 
+}, true);
+
+document.addEventListener("click", (event)=>{
+
+    if((event.target.innerText.length < 2) || (!event.target.innerText.includes(" "))){
+        display.innerText = event.target.innerText;
+    }
+}, true);
+
+document.addEventListener("keydown", (event)=>{
+    display.innerText = event.key;
 }, true);
